@@ -10,6 +10,10 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
     </head>
     <body>
         <header>
@@ -30,7 +34,7 @@
         </header>
 
         <section class="banner" id="home">
-            <div class="banner__textBx">
+            <div class="banner__textBx wow animate__fadeInLeft" data-wow-duration="2s">
                 <h2>Hello, I'm<br /><span>Kuzko Andrii</span></h2>
                 <h3>I'm a Front-End Web Developer</h3>
                 <a href="#" class="btn">About Me</a>
@@ -38,11 +42,11 @@
         </section>
 
         <section class="about" id="about">
-            <div class="heading">
+            <div class="heading wow animate__fadeIn" data-wow-duration="2s">
                 <h2>About Me</h2>
             </div>
             <div class="content">
-                <div class="contentBx w50">
+                <div class="contentBx w50 wow animate__fadeInLeft" data-wow-duration="2s">
                     <h3>I'm a Front-End Web Developer</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -65,21 +69,21 @@
                     </p>
                 </div>
 
-                <div class="w50">
+                <div class="w50 wow animate__fadeInRight" data-wow-duration="2s">
                     <img src="img/img1.jpg" alt="Error img1.jpg" class="img" />
                 </div>
             </div>
         </section>
 
         <section class="services" id="services">
-            <div class="heading white">
+            <div class="heading white wow animate__fadeInUp" data-wow-duration="2s">
                 <h2>My Services</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Possimus, qui.
                 </p>
             </div>
-            <div class="content">
+            <div class="content wow animate__fadeInUp" data-wow-duration="2s">
                 <div class="servicesBx">
                     <img src="img/icon1.png" alt="Error icon1.png" />
                     <h2>Web Design</h2>
@@ -143,7 +147,7 @@
         </section>
 
         <section class="work" id="work">
-            <div class="heading">
+            <div class="heading wow animate__fadeIn" data-wow-duration="2s">
                 <h2>My Latest Work</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -152,19 +156,19 @@
             </div>
 
             <div class="content">
-                <div class="workBx">
+                <div class="workBx wow animate__fadeInLeft" data-wow-duration="2s">
                     <img src="img/product1.jpg" alt="Error product1.jpg" />
                 </div>
 
-                <div class="workBx">
+                <div class="workBx wow animate__fadeInRight" data-wow-duration="2s">
                     <img src="img/product2.jpg" alt="Error product2.jpg" />
                 </div>
 
-                <div class="workBx">
+                <div class="workBx wow animate__fadeInLeft" data-wow-duration="2s">
                     <img src="img/product3.jpg" alt="Error product3.jpg" />
                 </div>
 
-                <div class="workBx">
+                <div class="workBx wow animate__fadeInRight" data-wow-duration="2s">
                     <img src="img/product4.jpg" alt="Error product4.jpg" />
                 </div>
             </div>
@@ -209,7 +213,7 @@
         </section>
 
         <section class="contact" id="contact">
-            <div class="heading white">
+            <div class="heading white wow animate__fadeInUp" data-wow-duration="2s">
                 <h2>Contact Me</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -218,7 +222,7 @@
             </div>
 
             <div class="content">
-                <div class="contact__info">
+                <div class="contact__info wow animate__fadeInLeft" data-wow-duration="2s">
                     <h3>Contact Info</h3>
                     <div class="contact__info__Bx">
                         <div class="box">
@@ -255,7 +259,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="formBx">
+                <div class="formBx wow animate__fadeInUp" data-wow-duration="2s">
                     <form>
                         <h3>Message Me</h3>
                         <input type="text" placeholder="Full Name" />
@@ -271,7 +275,17 @@
             <p>Copyright &#169; 2023 Kuzko Andrii. All Right Reserved</p>
         </div>
 
+        <script src="wow.min.js"></script>
         <script>
+            wow = new WOW({
+               boxClass: "wow", 
+               animateClass: "animated", 
+               offset: 10, 
+               mobile: true, 
+               live: true, 
+            });
+            wow.init();
+
             window.addEventListener("scroll", () => {
                 let header = document.body.querySelector("header");
                 header.classList.toggle("sticky", window.scrollY > 0);
@@ -284,5 +298,6 @@
                 menu.classList.toggle("active");
             }
         </script>
+    
     </body>
 </html>
