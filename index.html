@@ -271,6 +271,10 @@
             </div>
         </section>
 
+        <a href="#home" class="toTop">
+            <div class="arrow"></div>
+        </a>
+
         <div class="copyright">
             <p>Copyright &#169; 2023 Kuzko Andrii. All Right Reserved</p>
         </div>
@@ -287,13 +291,15 @@
             wow.init();
 
             window.addEventListener("scroll", () => {
-                let header = document.body.querySelector("header");
+                const header = document.body.querySelector("header");
+                const toTop = document.querySelector(".toTop");
                 header.classList.toggle("sticky", window.scrollY > 0);
+                toTop.classList.toggle("active", window.scrollY > 0);
             });
 
             function toggleMenu() {
-                let menuToggle = document.querySelector(".header__toggle");
-                let menu = document.querySelector(".menu");
+                const menuToggle = document.querySelector(".header__toggle");
+                const menu = document.querySelector(".menu");
                 menuToggle.classList.toggle("active");
                 menu.classList.toggle("active");
             }
